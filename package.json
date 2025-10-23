@@ -7,8 +7,7 @@
   "description": "Convert API descriptions between popular formats such as OpenAPI(fka Swagger), RAML, API Blueprint, WADL, etc.",
   "main": "index.js",
   "scripts": {
-    "browserify": "node node_modules/mkdirp/bin/cmd dist && browserify -s APISpecConverter -o dist/api-spec-converter.js .",
-    "test": "mocha && npm run browserify && karma start --single-run && git checkout -- dist"
+    "test": "mocha && karma start --single-run && git checkout -- dist"
   },
   "repository": {
     "type": "git",
@@ -42,18 +41,6 @@
   "bin": {
     "api-spec-converter": "./bin/api-spec-converter"
   },
-  "browserify": {
-    "transform": [
-      [
-        "babelify",
-        {
-          "presets": [
-            "env"
-          ]
-        }
-      ]
-    ]
-  },
   "dependencies": {
     "bluebird": "^3.7.2",
     "commander": "^2.20.0",
@@ -74,7 +61,6 @@
     "babel-preset-env": "^1.7.0",
     "babel-preset-es2015": "^6.24.1",
     "babelify": "^7.3.0",
-    "browserify": "^16.5.1",
     "chai": "^3.5.0",
     "karma": "^5.1.0",
     "karma-chai-plugins": "^0.7.0",

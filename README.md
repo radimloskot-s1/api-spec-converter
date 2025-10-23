@@ -1,5 +1,11 @@
 # api-spec-converter
-> This project is looking for a new maintainer! Let us know if you're interested in taking it over.
+> This project is forked
+
+## Build image
+```bash
+npm i
+docker build --build-arg ARTIFACTORY_PROXY=REPLACEME --secret id=npmrc,src=$HOME/.npmrc -t s1-api-spec-converter .
+```
 
 [![Share on Twitter][twitter-image]][twitter-link]
 
